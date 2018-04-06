@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Linking to localized exteral stylesheets and scripts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
+    <title>CrystalsCollector</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>CrystalsCollector</h1>
+            <p>
+                You will be given a random target number at the start of this game.
+            </p>
+            <p>
+                There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.
+            </p>
+            <p>
+                You win the game by matching your total score to the random goal; you lose the game if your total score goes above the random
+                goal.
+            </p>
+            <p>
+                The value of each crystal is hidden from you until you click on it.
+            </p>
+            <p>
+                Each time the game starts, the game will change the value of each crystal.
+            </p>
+        </div>
+        <div class="row text-light">
+            <div class="col-xs-12">
+
+                <!-- Win/Loss tracker -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="jumbotron bg-success">
+                            <h3 id="wins">Wins: 0</h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="jumbotron bg-danger">
+                            <h3 id="losses">Losses: 0</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Target/current scores -->
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="jumbotron bg-info">
+                            <h3 id="target">Goal: ?</h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="jumbotron bg-primary">
+                            <h3 id="score">Score: 0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The crystals -->
+        <div class="row" id="crystalRow">
+            <div class="col">
+                <img src="assets/images/chunk-of-white-crystal.jpg" alt="First crystal" id="crystal1" class="rounded img-fluid crystal" />
+            </div>
+            <div class="col">
+                <img src="assets/images/crystal-on-display.jpg" alt="Second crystal" id="crystal2" class="rounded img-fluid crystal" />
+            </div>
+            <div class="col">
+                <img src="assets/images/kryptonite.jpg" alt="Third crystal" id="crystal3" class="rounded img-fluid crystal" />
+            </div>
+            <div class="col">
+                <img src="assets/images/precious-crystals.jpg" alt="Fourth crystal" id="crystal4" class="rounded img-fluid crystal" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
