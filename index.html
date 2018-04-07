@@ -20,7 +20,6 @@
 
     <!-- Linking to localized exteral stylesheets and scripts -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/javascript/game.js"></script>
     <title>CrystalsCollector</title>
 
 </head>
@@ -47,58 +46,54 @@
                 Each time the game starts, the game will change the value of each crystal.
             </p>
         </div>
-        <div class="row text-light">
-            <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-6 col-md-3 col-lg-2 col-xl-1">
+                <table class="table-responsive-sm">
 
-                <!-- Win/Loss tracker -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="jumbotron bg-success">
-                            <h3 id="wins">Wins: 0</h3>
-                        </div>
+                    <!-- Win-loss counter -->
+                    <tr class="table-success">
+                        <th>Wins:</th>
+                        <td id="wins">0</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th>Losses:</th>
+                        <td id="losses">0</td>
+                    </tr>
+
+                    <!-- Score counter -->
+                    <tr class="table-info">
+                        <th>Goal:</th>
+                        <td id="target"></td>
+                    </tr>
+                    <tr class="table-primary">
+                        <th>Score</th>
+                        <td id="score">0</td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="col-xs-6 col-md-9 col-lg-10 col-xl-11">
+
+                <!-- The crystals -->
+                <div class="row" id="crystalRow">
+                    <div class="col-xs-6 col-sm-3">
+                        <img src="assets/images/chunk-of-white-crystal.jpg" alt="First crystal" id="crystal1" class="img-fluid crystal" />
                     </div>
-                    <div class="col-xs-12">
-                        <div class="jumbotron bg-danger">
-                            <h3 id="losses">Losses: 0</h3>
-                        </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <img src="assets/images/crystal-on-display.jpg" alt="Second crystal" id="crystal2" class="img-fluid crystal" />
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <img src="assets/images/kryptonite.jpg" alt="Third crystal" id="crystal3" class="img-fluid crystal" />
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <img src="assets/images/precious-crystals.jpg" alt="Fourth crystal" id="crystal4" class="img-fluid crystal" />
                     </div>
                 </div>
-
-            </div>
-
-            <!-- Target/current scores -->
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="jumbotron bg-info">
-                            <h3 id="target">Goal: ?</h3>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="jumbotron bg-primary">
-                            <h3 id="score">Score: 0</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- The crystals -->
-        <div class="row" id="crystalRow">
-            <div class="col">
-                <img src="assets/images/chunk-of-white-crystal.jpg" alt="First crystal" id="crystal1" class="rounded img-fluid crystal" />
-            </div>
-            <div class="col">
-                <img src="assets/images/crystal-on-display.jpg" alt="Second crystal" id="crystal2" class="rounded img-fluid crystal" />
-            </div>
-            <div class="col">
-                <img src="assets/images/kryptonite.jpg" alt="Third crystal" id="crystal3" class="rounded img-fluid crystal" />
-            </div>
-            <div class="col">
-                <img src="assets/images/precious-crystals.jpg" alt="Fourth crystal" id="crystal4" class="rounded img-fluid crystal" />
             </div>
         </div>
     </div>
+    <script src="assets/javascript/game.js"></script> Î
 </body>
 
 </html>
